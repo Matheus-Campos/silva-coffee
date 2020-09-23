@@ -1,0 +1,1 @@
+HMAC_KEY = ENV['HMAC_KEY']
