@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Client::User.create(
+  name: 'Matheus Campos', email: 'silva.campos.matheus@gmail.com',
+  phone: '+5581998765432', password: 'pass123'
+)
