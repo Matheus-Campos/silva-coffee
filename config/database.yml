@@ -21,6 +21,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: <%= ENV["DATABASE_TEST_HOST"] %>
+  username: <%= ENV["DATABASE_TEST_USER"] %>
+  database: <%= ENV["DATABASE_TEST_NAME"] %>
+  password: <%= ENV["DATABASE_TEST_PASSWORD"] %>
 
 production:
   <<: *default
