@@ -4,7 +4,7 @@ class Admin::Auth::SignInMediator
 
   def perform
     user = Admin::Auth::SignInService.perform(@params)
-    token = Global::JwtService.encode(user)
+    token = Global::JwtService.encode(id: user.id)
 
     Global::ResponseService.ok(
       token: token,

@@ -9,6 +9,7 @@ class CreateClientUsers < ActiveRecord::Migration[6.0]
       t.string :password_digest
       t.string :phone
       t.boolean :active, null: false, default: true
+      t.boolean :verified, null: false, default: false
 
       t.timestamps
     end
