@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'application#root'
+
   scope 'v1' do
     namespace :client do
       resources :auth, only: [] do

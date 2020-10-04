@@ -2,6 +2,13 @@ class ApplicationController < ActionController::API
   rescue_from AppError, with: :handle_app_error
   rescue_from ActiveRecord::RecordNotFound, with: :handle_record_not_found
 
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:root]
+
+  def root
+    render json: { status: 'ok' }, status: :ok
+  end
+
   private
 
   def handle_app_error(error)
